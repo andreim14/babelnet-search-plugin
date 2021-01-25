@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.6.5'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.21'
+}
+
+group 'it.stefan'
+version '1.0.3'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version '2018.1'
+}
+
+patchPluginXml {
+    changeNotes """
+      Added search for words on Babelnet"""
+    sinceBuild '181'
+    untilBuild '204'
+}
+test {
+    useJUnitPlatform()
+}
+publishPlugin {
+    token = "YOUR_TOKEN"
+}

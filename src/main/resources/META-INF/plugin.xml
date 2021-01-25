@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>it.stefan.babelnet-search-plugin</id>
+    <name>BabelNet Searcher</name>
+    <vendor email="stefan.bejgu@gmail.com" url="https://github.com/andreim14">Stefan Bejgu</vendor>
+
+    <description><![CDATA[
+    With this plugin you can search a synset or a term on <a href="https://babelnet.org/">BabelNet.org</a>.<br>
+    Select the term or synset ID (bn:00016606n) that you want to search, click right and in the context menu click on <i>Search on BabelNet</i>.
+    A browser with your search results will be opened.
+    ]]></description>
+
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <actions>
+        <action id="it.stefan.SearchOnBabelNet"
+                class="it.stefan.SearchOnBabelNet"
+                text="Search on BabelNet"
+                description="Search on BabelNet">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+
+        </action>
+    </actions>
+</idea-plugin>
