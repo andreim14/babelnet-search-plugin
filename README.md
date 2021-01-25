@@ -1,4 +1,5 @@
-# babelnet-search-plugin
+# babelnet-search-plugin 
+[![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/15899-babelnet-searcher.svg)](https://plugins.jetbrains.com/plugin/15899-babelnet-searcher)
 
 
 ## Plugin for [IntelliJ IDEA](https://plugins.jetbrains.com/plugin/15899-babelnet-searcher) to search a synset or a term on [BabelNet.org](https://babelnet.org/).
