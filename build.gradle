@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'it.stefan'
-version '1.0.3'
+version '1.0.4'
 
 repositories {
     mavenCentral()
@@ -24,7 +24,7 @@ intellij {
 
 patchPluginXml {
     changeNotes """
-      Added search for words on Babelnet"""
+       Fixed queries for the new BabelNet Version"""
     sinceBuild '181'
     untilBuild '204'
 }
