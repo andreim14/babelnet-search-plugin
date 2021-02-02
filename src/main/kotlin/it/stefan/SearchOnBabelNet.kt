@@ -16,9 +16,14 @@ class SearchOnBabelNet : AnAction() {
     val MAX_WORD_LEN = 100
 
     /**
-     * BabelNet url
+     * BabelNet url for word query
      */
-    val BABELNET_URL: String = "https://babelnet.org/synset?word="
+    val BABELNET_SEARCH_URL: String = "https://babelnet.org/search?word=%s&lang=EN"
+
+    /**
+     * BabelNet url for synset query
+     */
+    val BABELNET_SYNSET_URL: String = "https://babelnet.org/synset?id=%s&lang=EN"
 
     /**
      * BabelNet id prefix
@@ -40,11 +45,15 @@ class SearchOnBabelNet : AnAction() {
             return
         }
 
+        var searchURL: String = BABELNET_SEARCH_URL
+
         // Check if it is a synset
         if (BN_PATTERN.matches(selectedWord)) {
             selectedWord = getSynset(selectedWord)
+            searchURL = BABELNET_SYNSET_URL
         }
-        BrowserUtil.browse(BABELNET_URL + selectedWord)
+
+        BrowserUtil.browse(searchURL.format(selectedWord))
     }
 
     private fun getSynset(s: String): String {
