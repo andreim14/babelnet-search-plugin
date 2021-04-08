@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'it.stefan'
-version '1.0.4'
+version '1.0.5'
 
 repositories {
     mavenCentral()
@@ -24,9 +24,9 @@ intellij {
 
 patchPluginXml {
     changeNotes """
-       Fixed queries for the new BabelNet Version"""
+       Fixed Intellij version compatibility."""
     sinceBuild '181'
-    untilBuild '204'
+    untilBuild '211'
 }
 test {
     useJUnitPlatform()
