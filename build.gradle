@@ -26,7 +26,7 @@ patchPluginXml {
     changeNotes """
        Fixed Intellij version compatibility."""
     sinceBuild '181'
-    untilBuild '211'
+    untilBuild '211.*'
 }
 test {
     useJUnitPlatform()
